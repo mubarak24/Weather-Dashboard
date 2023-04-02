@@ -52,7 +52,6 @@ clickBtn.addEventListener("click", function () {
       humidityEl.textContent = `Humidity: ${humidity}%`;
       currentWeatherEl.appendChild(humidityEl);
 
-      // Append current weather to container
       currentWeatherContainer.innerHTML = "";
       currentWeatherContainer.appendChild(currentWeatherEl);
     })
@@ -76,7 +75,6 @@ clickBtn.addEventListener("click", function () {
 
     forecastContainer.innerHTML = "";
 
-    // create elements to display forecast
     var forecastTitleEl = document.createElement("h2");
     forecastTitleEl.textContent = "5-Day Forecast:";
     forecastContainer.appendChild(forecastTitleEl);
@@ -84,7 +82,6 @@ clickBtn.addEventListener("click", function () {
     var forecastRowEl = document.createElement("div");
     forecastRowEl.classList.add("row");
 
-    // loop through forecast data for next 5 days
     for (var i = 0; i < data.list.length; i++) {
       if (data.list[i].dt_txt.indexOf("15:00:00") !== -1) {
         var forecastColEl = document.createElement("div");
@@ -125,4 +122,12 @@ clickBtn.addEventListener("click", function () {
     forecastContainer.appendChild(forecastRowEl);
   });
 
+});
+
+searchHistory.addEventListener("click", function(event) {
+  if (event.target.matches("li")) {
+    var city = event.target.textContent.trim();
+    searchInput.value = city;
+    clickBtn.click();
+  }
 });
