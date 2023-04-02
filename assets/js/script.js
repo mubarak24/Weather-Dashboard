@@ -66,6 +66,7 @@ clickBtn.addEventListener("click", function () {
     searchHistory.appendChild(li);
   });
 
+  //FORECAST WEATHER
   fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + searchInput.value + '&units=imperial&appid=26f261122333e7edeba0c7e85805e21e')
   .then(function (response) {
     return response.json();

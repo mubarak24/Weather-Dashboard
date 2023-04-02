@@ -1,9 +1,9 @@
 body {
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
+  }
+  
+  header {
     background-color: hsl(240, 57%, 49%);
     color: white;
     font-size: 200%;
@@ -11,19 +11,32 @@ header {
     font-weight: bold;
     padding: 10px;
     margin-bottom: 20px;
-}
-
-div {
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .left-column {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .right-column {
+    flex: 1;
+  }
+  
+  #search {
+    margin-top: 10px;
+  }
+  
+  #click {
+    margin-top: 1%;
+  }
+  
+  div {
     background-color: #f5f5f5;
     border: 1px solid #ddd;
-    margin-left: 200px;
-}
-
-#search {
-    margin-top: 10px;
-}
-
-#click {
-    margin-left: 4%;
-    margin-top: 1%;
-}
+    padding: 20px;
+  }
+  
